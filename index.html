@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>STD.bio – STI Testing Explained (Home Tests &amp; Clinics, 2025)</title>
+  <meta name="description"
+        content="STD.bio is an independent, evidence-based guide to STI (STD) testing. Learn what to test for, when to test, home test vs clinic differences, window periods, privacy considerations, and when to see a clinician." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://std.bio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="STD.bio – STI (STD) Testing Explained (2025)" />
+  <meta property="og:description"
+        content="Neutral, evidence-based STI testing overview: what to test for, timing/window periods, home tests vs clinics, and privacy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://std.bio/" />
+  <meta property="og:image" content="https://genectics.com/og-image-std-testing.jpg" />
+
+  <!-- Structured data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "STD.bio",
+    "url": "https://std.bio/",
+    "description": "Independent, evidence-based information about STI/STD testing and sexual health screening.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ronarn",
+      "url": "https://ronarn.com"
+    }
+  }
+  </script>
+
+  <!-- Structured data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between STD and STI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "STI means sexually transmitted infection; STD means sexually transmitted disease. Many infections cause no symptoms, so 'STI' is often used for screening and testing discussions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I get tested for STIs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Testing timing depends on exposure risk, symptoms, and the specific infection. Some tests require waiting for a window period after exposure. If you have symptoms or significant concern, seek clinical advice rather than relying on generic timelines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are at-home STI tests reliable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some at-home tests can be useful when they use validated lab processing and correct sample collection. Reliability depends on the test type, correct timing, and proper sample handling. Positive or unclear results often require confirmatory testing and clinical guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to test if I have no symptoms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many STIs can be asymptomatic. Whether you should test depends on sexual activity, partners, and risk factors. Consider discussing screening with a clinician or sexual health service for a plan tailored to your situation."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- ===== Consent (HARD) ===== -->
+  <style>
+    body.consent-locked {
+      overflow: hidden !important;
+      touch-action: none !important;
+    }
+    .consent-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .consent-overlay[aria-hidden="false"] { display: flex; }
+
+    .consent-modal {
+      width: 100%;
+      max-width: 720px;
+      background: #0b1220;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .consent-header { padding: 18px 18px 0 18px; }
+    .consent-title { margin: 0; font-size: 1.1rem; letter-spacing: 0.01em; }
+    .consent-body {
+      padding: 14px 18px 18px 18px;
+      line-height: 1.55;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .consent-body p { margin: 10px 0; }
+    .consent-list { margin: 12px 0 0 0; padding-left: 18px; }
+    .consent-list li { margin: 6px 0; }
+
+    .consent-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 16px 18px 18px 18px;
+      background: rgba(2, 6, 23, 0.5);
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .consent-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .consent-accept { background: #ec4899; color: #0b1220; }
+    .consent-reject {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    .consent-links {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .consent-links a { color: #93c5fd; text-decoration: none; }
+    .consent-links a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Consent + GA loader (GA4 loads only AFTER accept) -->
+  <script>
+    (function () {
+      const CONSENT_KEY = "ronarn_consent_analytics_v1";
+      const GA_ID = "G-3GVJ73QQ5J"; // same as Genectics.com
+
+      function lockPage() {
+        document.body.classList.add("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "false");
+      }
+
+      function unlockPage() {
+        document.body.classList.remove("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "true");
+      }
+
+      function loadGA4() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, { anonymize_ip: true });
+      }
+
+      function setConsent(value) { localStorage.setItem(CONSENT_KEY, value); }
+      function getConsent() { return localStorage.getItem(CONSENT_KEY); }
+      function clearConsent() { localStorage.removeItem(CONSENT_KEY); }
+
+      window.__openPrivacySettings = function () {
+        clearConsent();
+        window.location.reload();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const saved = getConsent();
+
+        if (saved === "accepted") { loadGA4(); unlockPage(); return; }
+        if (saved === "rejected") { unlockPage(); return; }
+
+        lockPage();
+
+        const btnAccept = document.getElementById("consent-accept");
+        const btnReject = document.getElementById("consent-reject");
+
+        btnAccept.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA4();
+          unlockPage();
+        });
+
+        btnReject.addEventListener("click", function () {
+          setConsent("rejected");
+          unlockPage();
+        });
+      });
+    })();
+  </script>
+</head>
+
+<body class="consent-locked">
+  <!-- HARD Consent Overlay -->
+  <div id="consent-overlay" class="consent-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Privacy choices">
+    <div class="consent-modal">
+      <div class="consent-header">
+        <h2 class="consent-title">Privacy choices</h2>
+      </div>
+      <div class="consent-body">
+        <p>
+          STD.bio uses <strong>analytics</strong> to understand which STI testing topics people read
+          (timing, symptoms, home tests vs clinics) so we can improve the content.
+        </p>
+        <ul class="consent-list">
+          <li><strong>If you accept:</strong> we load Google Analytics (GA4) to measure visits and basic usage trends.</li>
+          <li><strong>If you reject:</strong> the site still works normally, but we do not load analytics.</li>
+        </ul>
+        <p>
+          Acceptance is only about <strong>analytics</strong>. This site is educational and does not provide medical advice.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <button id="consent-accept" class="consent-btn consent-accept" type="button">Accept analytics</button>
+        <button id="consent-reject" class="consent-btn consent-reject" type="button">Reject</button>
+
+        <div class="consent-links">
+          <span>Learn more:</span>
+          <a href="/privacy.html">Privacy</a>
+          <span>·</span>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-name">STD.bio</div>
+        <div class="brand-tagline">
+          Evidence-based STI (STD) testing: what to test for, when to test, home tests vs clinics, and privacy.
+        </div>
+      </div>
+      <div class="trust-tags">
+        <span class="trust-tag">No sponsorships</span>
+        <span class="trust-tag">Educational only</span>
+        <span class="trust-tag">Privacy-aware</span>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div>
+          <h1 id="hero-heading" class="hero-title">
+            STI testing: get the right test at the right time.
+          </h1>
+
+          <p class="hero-subtitle">
+            “STD testing” is often used as a general term, but different infections need different tests and timing.
+            This site explains how to think about screening, window periods, symptoms, and choosing reliable providers.
+          </p>
+
+          <ul class="hero-list">
+            <li>What “STI” vs “STD” means (and why it matters for screening).</li>
+            <li>Home test vs clinic: accuracy, logistics, and follow-up.</li>
+            <li>Timing after exposure: why some tests require waiting.</li>
+            <li>Privacy considerations and what to look for in policies.</li>
+          </ul>
+
+          <div class="hero-highlight">
+            If you have symptoms, severe pain, fever, or you feel unsafe, seek medical care promptly.
+          </div>
+
+          <div class="hero-actions">
+            <a href="#what-to-test" class="btn-primary">
+              What to test for
+              <span class="chevron">›</span>
+            </a>
+            <a href="#timing" class="btn-secondary">
+              Timing &amp; window periods
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="rating-pill">
+            <span class="star">★</span>
+            Most common need: <strong>screening after exposure</strong>
+          </div>
+          <p class="hero-note">
+            The highest-value step is often choosing a test panel that matches your risk and testing at an appropriate time.
+          </p>
+        </aside>
+      </section>
+
+      <!-- WHAT TO TEST -->
+      <section id="what-to-test" class="card">
+        <h2 class="section-title">What to test for (general overview)</h2>
+        <p class="section-subtitle">
+          The right tests depend on your exposure type, symptoms, partners, and prior results. This page is educational and not personalized medical advice.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Common bacterial STIs</h3>
+            <p>
+              Often tested using swabs and/or urine (depending on infection and exposure site). Many are treatable, and early testing + treatment matters.
+            </p>
+            <ul class="hero-list">
+              <li>Chlamydia</li>
+              <li>Gonorrhea</li>
+              <li>Syphilis (blood test)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Common viral infections</h3>
+            <p>
+              Testing approach varies: blood tests, swabs from lesions, or specific screening strategies depending on region and guidelines.
+            </p>
+            <ul class="hero-list">
+              <li>HIV (blood/rapid tests, depending on type)</li>
+              <li>HSV (herpes) (context-dependent)</li>
+              <li>Hepatitis B/C (blood tests)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>When “a panel” makes sense</h3>
+            <p>
+              Many services offer multi-test panels. Panels are useful when you want broad screening, but they still must match timing and exposure.
+            </p>
+            <ul class="hero-list">
+              <li>Check what’s included (and what’s not).</li>
+              <li>Confirm sample type (swab/urine/blood).</li>
+              <li>Ensure results include clear next steps.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- TIMING -->
+      <section id="timing" class="card">
+        <h2 class="section-title">Timing &amp; window periods (why “too early” happens)</h2>
+        <p class="section-subtitle">
+          After exposure, some infections may not be detectable immediately. That detection delay is often called a “window period.”
+        </p>
+
+        <ol class="numbered">
+          <li><strong>Exposure → infection → detectability</strong> is not instant for many tests.</li>
+          <li><strong>Symptoms are not required</strong> for an infection to be present.</li>
+          <li><strong>Negative tests early</strong> sometimes need re-testing later.</li>
+          <li><strong>Clinic guidance matters</strong> if you are anxious, symptomatic, or high-risk.</li>
+        </ol>
+
+        <p class="inline-note">
+          If you need a clear plan, talk to a sexual health clinic or doctor for timing guidance tailored to your situation.
+        </p>
+      </section>
+
+      <!-- HOME VS CLINIC -->
+      <section id="home-vs-clinic" class="card">
+        <h2 class="section-title">Home STI tests vs clinic testing</h2>
+        <p class="section-subtitle">
+          Home tests can be convenient, but you should know what “home test” actually means.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Home collection + lab processing</h3>
+            <p>
+              You collect a sample at home and send it to a lab. Reliability depends on sample collection quality and lab methods.
+            </p>
+            <ul class="hero-list">
+              <li>Often more robust than self-read rapid tests.</li>
+              <li>Good for privacy and convenience.</li>
+              <li>Confirm how results are delivered and supported.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Rapid self-tests</h3>
+            <p>
+              Some tests are read at home. These can be useful in specific scenarios, but they have limitations and may need confirmation.
+            </p>
+            <ul class="hero-list">
+              <li>Convenient and quick.</li>
+              <li>Not available for every infection.</li>
+              <li>False negatives/positives can occur.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Clinics and sexual health services</h3>
+            <p>
+              Clinics can choose validated tests, collect appropriate samples, and arrange treatment/partner notification support where relevant.
+            </p>
+            <ul class="hero-list">
+              <li>Best when you have symptoms.</li>
+              <li>Clear follow-up and interpretation.</li>
+              <li>May be required for certain confirmatory tests.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRIVACY -->
+      <section id="privacy" class="card">
+        <h2 class="section-title">Privacy and sensitive health data</h2>
+        <p class="section-subtitle">
+          STI testing is sensitive. Before using any online service, verify how they store data and what deletion options exist.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Checklist</h3>
+            <ul class="hero-list">
+              <li>Can you delete your account and results?</li>
+              <li>Is data used for research or marketing?</li>
+              <li>Is there a clear contact point for privacy requests?</li>
+              <li>Do they specify retention periods?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Related hubs in this network</h3>
+            <p>
+              For broader home testing categories (DNA tests, paternity, fertility), the network uses Genectics.com as a comparison hub.
+            </p>
+            <a href="https://genectics.com/?ref=std.bio-hub" class="btn-primary" target="_blank" rel="noopener">
+              Go to Genectics.com <span class="chevron">›</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- DISCLAIMER -->
+      <section class="disclaimer">
+        <p>
+          STD.bio does not provide medical advice. This website is for informational and educational purposes only.
+          If you have symptoms, high-risk exposure, or results that affect major decisions, consult qualified health professionals.
+        </p>
+        <p>
+          Analytics consent (if accepted) is used only to understand which content is useful and to improve the site.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© <span id="year"></span> STD.bio – Independent STI (STD) testing education.</span>
+      <span>Operated by ronarn AS, Norway. Educational information site.</span>
+      <span>Contact: <a href="mailto:info@std.bio">info@std.bio</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+
+      <span class="footer-links">
+        <a href="/about.html">About STD.bio</a> ·
+        <a href="/privacy.html">On-site Privacy</a> ·
+        <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
+        <a href="https://contactus.bio" target="_blank" rel="noopener">Network Contact</a> ·
+        <a href="https://disclaimer.bio" target="_blank" rel="noopener">Disclaimer</a> ·
+        <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a>
+        <span> · </span>
+        <a href="#" onclick="window.__openPrivacySettings(); return false;">Privacy settings</a>
+      </span>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+```0
